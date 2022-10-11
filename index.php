@@ -16,7 +16,17 @@ if(isset($_POST['enter'])){
     if($_POST['name'] != ""){
         if($_POST['name'] != "ADMIN"){
              if($_POST['name'] != "a15900000a"){
-                 $_SESSION['name'] = stripslashes(htmlspecialchars($_POST['name']));
+                 function censor($sentence, $txtFile) {
+                     $words = file($txtFile);
+                     foreach ($words as $word) {
+                         $word = trim($word);
+                         $sentence = str_replace($word, str_repeat("*", strlen($word)), $sentence);
+                     }
+                     return $sentence;
+                 }
+
+                 $name = censor(strtolower($_POST['name']), "bad.txt");
+                 $_SESSION['name'] = stripslashes(htmlspecialchars($name));
              }
              else{
                  $_SESSION['name'] = stripslashes(htmlspecialchars("ADMIN"));
