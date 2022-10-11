@@ -6,7 +6,7 @@ if(isset($_SESSION['name'])){
          'fuck' => 'f*ck',
          'shit' => 'sh*t',
 	 'hell' => 'h*ll',
-         'jesus' => 'j*s*s',
+         'jesus' => 'j*sus',
          'god' => 'g*d',
          'anus' => '*n*s',
          'ass' => '*ss',
