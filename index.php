@@ -45,7 +45,7 @@ function loginForm(){
     <img src=logo.jpeg alt="logo">
     <h3>Please enter your name to continue!</h3>
     <br>
-    <h4>This server is under constant moderation, and improper usage of it will result in a ban. Every message is permanent. To contact Admin, please mention @admin in your message.</h4>
+    <h4>This server is under constant moderation, and it\'s improper usage will result in a ban. Every message is permanent. To contact Admin, please mention @admin in your message.</h4>
     <form action="index.php" method="post">
       <label for="name">Name →</label>
       <input type="text" name="name" id="name" />
