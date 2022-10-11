@@ -20,7 +20,7 @@ if(isset($_POST['enter'])){
         echo '<span class="error">Please type in a name</span>';
     }
 }
- 
+
 function loginForm(){
     echo
     '<div id="loginform">
@@ -33,6 +33,7 @@ function loginForm(){
       <label for="name">Name →</label>
       <input type="text" name="name" id="name" />
       <input type="submit" name="enter" id="enter" value="Enter" />
+      <br>
     </form>
   </div>';
 }
@@ -45,7 +46,7 @@ function loginForm(){
         <meta charset="utf-8" />
  
         <title>TotoB12 Chat</title>
-        <meta name="description" content="Tuts+ Chat Application" />
+        <meta name="description" content="TotoB12 Chat" />
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
@@ -108,7 +109,7 @@ function loginForm(){
                 setInterval (loadLog, 2500);
  
                 $("#exit").click(function () {
-                    var exit = confirm("Are you sure you want to end the session?");
+                     var exit = confirm("Are you sure you want to exit the session?");
                     if (exit == true) {
                     window.location = "index.php?logout=true";
                     }
