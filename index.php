@@ -47,7 +47,7 @@ function loginForm(){
     <br>
     <h4>This server is under constant moderation, and it\'s improper usage will result in a ban.</h4>
     <h4>Every message is permanent.</h4>
-    <h4>To contact Admin for any reason, please mention @admin in your message.</h4>
+    <h4>To contact Admin, please mention @admin in your message.</h4>
     <h4>By using this service, you accept the <a href = "terms.html" target = "_self">Terms Of Use.</a></h4>
     <form action="index.php" method="post">
       <label for="name">Name →</label>
