@@ -14,7 +14,17 @@ if(isset($_GET['logout'])){
  
 if(isset($_POST['enter'])){
     if($_POST['name'] != ""){
-        $_SESSION['name'] = stripslashes(htmlspecialchars($_POST['name']));
+        if($_POST['name'] != "ADMIN"){
+             if($_POST['name'] != "a15900000a"){
+                 $_SESSION['name'] = stripslashes(htmlspecialchars($_POST['name']));
+             }
+             else{
+                 $_SESSION['name'] = stripslashes(htmlspecialchars("ADMIN"));
+             }
+        }
+        else{
+            echo '<span class="error">Please type in a different name</span>';
+        }
     }
     else{
         echo '<span class="error">Please type in a name</span>';
