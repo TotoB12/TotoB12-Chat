@@ -32,6 +32,8 @@ if(isset($_POST['enter'])){
             }
             else{
                 $_SESSION['name'] = stripslashes(htmlspecialchars("Antonin"));
+            }
+        }
         else{
             $_SESSION['name'] = stripslashes(htmlspecialchars("ADMIN"));
         }
