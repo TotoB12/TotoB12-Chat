@@ -6,7 +6,7 @@ if(isset($_SESSION['name'])){
         $words = file($txtFile);
         foreach ($words as $word) {
             $word = trim($word);
-            $sentence = str_replace($word, str_repeat("*", strlen($word)), $sentence);
+            $sentence = substr(str_replace($word, str_repeat("*", strlen($word)), $sentence), 0, 1000);
         }
         return $sentence;
     }
