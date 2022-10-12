@@ -27,6 +27,7 @@ if(isset($_POST['enter'])){
 
                 $name = censor(strtolower($_POST['name']), "bad.txt");
                 $name = censor(strtolower($name), "bad_name.txt");
+                $name = substr($name, 0, 27);
                       
                 $_SESSION['name'] = stripslashes(htmlspecialchars($name));
             }
