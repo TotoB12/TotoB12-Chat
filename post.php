@@ -2,7 +2,7 @@
 session_start();
 if(isset($_SESSION['name'])){
      
-    if($_SESSION['name'] != ""){
+    if($_POST['text'] != ""){
          
         function censor($sentence, $txtFile) {
         $words = file($txtFile);
