@@ -2,13 +2,20 @@
 session_start();
 if(isset($_SESSION['name'])){
      
-    function censor($sentence, $txtFile) {
+    if($_SESSION['name'] != ""){
+         
+        function censor($sentence, $txtFile) {
         $words = file($txtFile);
         foreach ($words as $word) {
             $word = trim($word);
             $sentence = substr(str_replace($word, str_repeat("*", strlen($word)), $sentence), 0, 1000000000);
         }
         return $sentence;
+    }
+        
+    }
+    else{
+        echo '<span class="error">Please type in a message</span>';
     }
 
     $text = censor(strtolower($_POST['text']), "bad.txt");
