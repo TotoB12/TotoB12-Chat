@@ -48,7 +48,7 @@ function loginForm(){
     echo
     '<div id="loginform">
     <p>Welcome to TotoB12 Chat</p>
-    <img src=logo.jpeg alt="logo">
+    <img src=logo.jpeg alt="logo" height="257" width='389">
     <h3>Please enter your name to continue!</h3>
     <br>
     <h4>This server is under constant moderation.</h4>
