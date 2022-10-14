@@ -99,7 +99,7 @@ function loginForm(){
             </div>
  
             <form name="message" action="">
-                <input#usermsg name="usermsg" type="text" id="usermsg" />
+                <input name="usermsg" type="text" id="usermsg" />
                 <input name="submitmsg" type="submit" id="submitmsg" value="Send" />
             </form>
         </div>
