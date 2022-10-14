@@ -102,7 +102,7 @@ function loginForm(){
             </div>
  
             <form name="message" action="">
-                <input name="usermsg" type="text" id="usermsg" />
+                <input name="usermsg" aria-label="Message" type="text" id="usermsg" />
                 <input name="submitmsg" type="submit" id="submitmsg" value="Send" />
             </form>
         </div>
