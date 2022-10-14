@@ -73,6 +73,7 @@ function loginForm(){
         <meta charset="utf-8" />
      
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="favicon.ico">
       
         <title>TotoB12 Chat</title>
         <meta name="description" content="TotoB12 Chat" />
