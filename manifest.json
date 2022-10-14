@@ -15,5 +15,5 @@
   "start_url": "totob12-chat.totob12.repl.co/"
   "display": "standalone"
   
-  "prefer_related_applications": true,
+  "prefer_related_applications": auto,
 }
