@@ -48,7 +48,7 @@ function loginForm(){
     echo
     '<div id="loginform">
     <h4 class="title">Welcome to TotoB12 Chat !</h4>
-    <img src="dolphin.png" alt="logo" width=60%>
+    <img src="totob12icon.png" alt="logo" width=25%>
     <h3><strong>Please enter your name to continue</strong></h3>
     <br>
     <h4>This server is under constant moderation.</h4>
@@ -73,8 +73,8 @@ function loginForm(){
         <meta charset="utf-8" />
      
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="apple-touch-icon" href="favicon.ico">
-      
+        <link rel="apple-touch-icon" href="totob12icon.png">
+        <link rel="icon" type="image/x-icon" href="totob12icon.png">
         <title>TotoB12 Chat</title>
         <meta name="description" content="TotoB12 Chat" />
         <link rel="stylesheet" href="style.css" />
