@@ -47,19 +47,19 @@ if(isset($_POST['enter'])){
 function loginForm(){
     echo
     '<div id="loginform">
-    <p>Welcome to TotoB12 Chat</p>
-    <img src=logo.jpeg alt="logo" height="257" width="389">
-    <h3>Please enter your name to continue!</h3>
+    <h4 class="title">Welcome to TotoB12 Chat !</h4>
+    <img src="dolphin.png" alt="logo" width=60%>
+    <h3><strong>Please enter your name to continue</strong></h3>
     <br>
     <h4>This server is under constant moderation.</h4>
     <h4>It\'s improper usage will result in a ban.</h4>
     <h4>Every message is permanent.</h4>
-    <h4>To contact Admin, please mention @admin in your message.</h4>
-    <h4>By using this service, you accept it\'s <a href = "terms.html" target = "_self">Terms Of Use.</a></h4>
+    <h4>To contact Admin, please mention <strong>@admin</strong> in your message.</h4>
+    <h4>By using this service, you accept it\'s <a class="tou" href = "terms.html" target = "_self">Terms Of Use.</a></h4>
     <form action="index.php" method="post">
-      <label for="name">Name →</label>
-      <input type="text" name="name" id="name" />
-      <input type="submit" name="enter" id="enter" value="Enter" />
+      <label class="text" for="name">Name →</label>
+      <input class="text" type="text" name="name" id="name" />
+      <input type="submit" name="enter" id="enter" value="ENTER" />
       <br>
     </form>
   </div>';
@@ -78,6 +78,74 @@ function loginForm(){
         <title>TotoB12 Chat</title>
         <meta name="description" content="TotoB12 Chat" />
         <link rel="stylesheet" href="style.css" />
+
+      <style>
+
+        body {
+          background-color: #1a1d21; 
+          margin: 0px;
+        }
+
+        #loginform {
+          background-color: #1a1d21;
+        }
+
+        h4 {
+          color: #C3E0E5;
+          font-family: "Century Gothic", "Monospace";
+        }
+
+        h3 {
+          color: #C3E0E5;
+          font-family: "Century Gothic", "Monospace";
+          font-size: 22px;
+        }
+
+        .text {
+          color: white;
+          font-family: "Century Gothic", "Monospace";
+        }
+
+        .title { 
+        background-color: #274472;
+        color: #C3E0E5;
+        padding: 32px 16px; 
+        margin: 0px; 
+        font-family: "Century Gothic", "Monospace";
+        font-size: 64px;
+        } 
+
+        .tou {
+          color: #f44336;
+        }
+
+        #enter {
+          color: white;
+          background-color: #5885AF;
+          border: 2px solid #C3E0E5;
+          font-family: "Century Gothic", "Monospace";
+          opacity: 1;
+        }
+
+        #enter:hover {
+          opacity: 0.8;
+        }
+
+        .welcome {
+          background-color: #274472;
+          color: #C3E0E5;
+          padding: 32px 16px; 
+          margin: 0px; 
+          font-family: "Century Gothic", "Monospace";
+          font-size: 64px;
+          text-align: center;
+        }
+
+        .logout {
+          text-align: center;
+        }
+        
+      </style>
     </head>
     <body>
     <?php
@@ -88,7 +156,9 @@ function loginForm(){
     ?>
         <div id="wrapper">
             <div id="menu">
-                <p class="welcome">Welcome, <b><?php echo $_SESSION['name']; ?></b></p>
+                <p class="welcome">Welcome, <b><?php echo $_SESSION['name']; ?></b></p><br>
+            </div>
+            <div id="menu">
                 <p class="logout"><a id="exit" href="#">Exit Chat</a></p>
             </div>
  

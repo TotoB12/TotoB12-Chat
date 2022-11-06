@@ -15,7 +15,7 @@ if(isset($_SESSION['name'])){
      
     if(($text != "") && ($text != " ")){
          
-        $text_message = "<div class='msgln'><span class='chat-time'>".date("g:i A")."</span> <b class='user-name'>".$_SESSION['name']."</b> ".stripslashes(htmlspecialchars($text))."<br></div>";
+        $text_message = "<div class='msgln'><span class='chat-time' tz='America/New_York'>".date("g:i A")."</span> <b class='user-name'>".$_SESSION['name']."</b> ".stripslashes(htmlspecialchars($text))."<br></div>";
         file_put_contents("log.html", $text_message, FILE_APPEND | LOCK_EX);
          
     }
