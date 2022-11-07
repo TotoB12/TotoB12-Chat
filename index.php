@@ -47,8 +47,9 @@ if(isset($_POST['enter'])){
 function loginForm(){
     echo
     '<div id="loginform">
-    <h4 class="title">Welcome to TotoB12 Chat !</h4>
-    <img src="totob12icon.png" alt="logo" width=25%>
+    <a href="https://totob12.github.io/">
+    <h4 class="title"><img class="titleimg" src="totob12titlechat.png" align="center" width=60%></h4></a>
+    <img class="welcomelogo" src="totob12iconchat.png" alt="logo" width=25%>
     <h3><strong>Please enter your name to continue</strong></h3>
     <br>
     <h4>This server is under constant moderation.</h4>
@@ -106,13 +107,18 @@ function loginForm(){
           font-family: "Century Gothic", "Monospace";
         }
 
+        .welcomelogo {
+          margin: 16px 16px;
+        }
+
         .title { 
         background-color: #274472;
         color: #C3E0E5;
-        padding: 32px 16px; 
         margin: 0px; 
+        padding: 0 0;
         font-family: "Century Gothic", "Monospace";
         font-size: 64px;
+        text-align: center;
         } 
 
         .tou {
