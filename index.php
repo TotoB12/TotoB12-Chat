@@ -68,6 +68,17 @@ function loginForm(){
     </ul>
     <a href="https://totob12.github.io/">
     <h4 class="title"><img class="titleimg" src="totob12titlechat.png" align="center" width=60%></h4></a>
+    <div class="box">
+    <div class="panel">
+    <div class="textbox">
+    <h3 style="margin-top: 16px;">FORUM</h3>
+    <hr style="color: #c3e0e5; background-color: #c3e0e5;border-width:0;height:1.5px;margin: 16px 0px;">
+    <h4 style="text-align:justify;">Totob12 forum allow you to post pictures and many more like on reddit !</h4>
+    <button class="b1" style="font-size: 18px;" onclick="window.location.href="https://totob12.flarum.cloud/";">Go to the forum</button>
+    </div>
+    </div>
+    <div class="chatbox">
+    <h2>JOIN THE CHAT</h2>
     <img class="welcomelogo" src="totob12iconchat.png" alt="logo" width=25%>
     <h3><strong>Please enter your name to continue</strong></h3>
     <br>
@@ -81,7 +92,8 @@ function loginForm(){
       <input class="text" type="text" name="name" id="name" />
       <input type="submit" name="enter" id="enter" value="ENTER" />
     </form>
-    <div><button class="b1" style="font-size: 18px;" onclick="window.location.href="https://totob12.flarum.cloud/";">Go to the forum</button></div>
+    </div>
+    </div>
   </div>';
 }
  
@@ -122,6 +134,13 @@ function loginForm(){
           font-size: 22px;
         }
 
+        h2 {
+          color: #C3E0E5;
+          font-family: "Century Gothic", "Monospace";
+          font-size: 22px;
+          margin-top: 16px;
+        }
+        
         .text {
           color: white;
           font-family: "Century Gothic", "Monospace";
@@ -170,7 +189,45 @@ function loginForm(){
         .logout {
           text-align: center;
         }
-        
+
+        .panel {
+          float:left;
+          background-color: #1B2B44;
+          border-radius: 12px;
+          width: 25%;
+        }
+
+        .panel:hover {
+         border: 2px solid #274472;
+        }
+
+        .panel-title {
+          text-align: left;
+        }
+
+        .chatbox {
+          border: 2px solid #274472;
+          border-radius: 12px;
+          float: right;
+          width: 70%;
+          margin-left: 16px;
+        }
+
+        .box {
+          margin: 16px 16px;
+        }
+
+        .textbox {
+          margin: 0px 16px;
+        }
+
+        @media only screen and (max-width: 1100px) {
+  .panel, .chatbox {
+    width: 100%;
+    margin-bottom: 16px;
+          }
+        }
+
       </style>
     </head>
     <body>
