@@ -47,6 +47,25 @@ if(isset($_POST['enter'])){
 function loginForm(){
     echo
     '<div id="loginform">
+    <ul>
+    <li><a class="img"><img src="totob12icon.png" alt="Logo" height="44"></a></li>
+    <li><a class="icon" href="https://totob12.github.io/index.html"><span class="material-symbols-outlined">
+    home</span></a></li>
+    <li><a class="icon active" href="https://TotoB12-Chat.totob12.repl.co/"><span class="material-symbols-outlined">
+    forum</span><h10 class=cc>Social</h10></a></li>
+    <li><a class="icon" href="https://totob12.github.io/things/inpainting-forward.html"><span class="material-symbols-outlined">
+    format_paint</span><h10 class="cc">Paint</h10></a></li>
+    <li><a class="icon" href="https://chill-radio.totob12.repl.co/"><span class="material-symbols-outlined">
+    radio</span><h10 class="cc">Radio</h10></a></li>
+    <li><a class="icon" href="https://totob12.github.io/things/games.html"><span class="material-symbols-outlined">
+    sports_esports</span><h10 class="cc">Games</h10></a></li>
+    <li><a class="icon" href="https://totob12.github.io/things/sites.html"><span class="material-symbols-outlined">
+    handyman</span><h10 class="cc">Random</h10></a></li>
+    <li><a class="icon right" href="https://totob12.github.io/things/feedback.html"><span class="material-symbols-outlined">
+    alternate_email</span></a></li>
+    <li><a class="icon right" href="https://totob12.github.io/things/countdown.html"><span class="material-symbols-outlined">
+    hourglass_empty</span></a></li>
+    </ul>
     <a href="https://totob12.github.io/">
     <h4 class="title"><img class="titleimg" src="totob12titlechat.png" align="center" width=60%></h4></a>
     <img class="welcomelogo" src="totob12iconchat.png" alt="logo" width=25%>
@@ -61,8 +80,8 @@ function loginForm(){
       <label class="text" for="name">Name →</label>
       <input class="text" type="text" name="name" id="name" />
       <input type="submit" name="enter" id="enter" value="ENTER" />
-      <br>
     </form>
+    <div><button class="b1" style="font-size: 18px;" onclick="window.location.href="https://totob12.flarum.cloud/";">Go to the forum</button></div>
   </div>';
 }
  
@@ -79,6 +98,7 @@ function loginForm(){
         <title>TotoB12 Chat</title>
         <meta name="description" content="TotoB12 Chat" />
         <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
       <style>
 
