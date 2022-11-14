@@ -73,7 +73,7 @@ function loginForm(){
     <div class="textbox">
     <h3 style="margin-top: 16px;">FORUM</h3>
     <hr style="color: #c3e0e5; background-color: #c3e0e5;border-width:0;height:1.5px;margin: 16px 0px;">
-    <h4 style="text-align:justify;">Totob12 forum allow you to post pictures and many more like on reddit !</h4>
+    <h4 style="text-align:justify;">TotoB12 forum allow you to post pictures and much more, like on reddit!</h4>
     <button class="b1" style="font-size: 18px;" onclick="window.location.href="https://totob12.flarum.cloud/";">Go to the forum</button>
     </div>
     </div>
@@ -239,6 +239,25 @@ function loginForm(){
     ?>
         <div id="wrapper">
             <div id="menu">
+              <ul>
+    <li><a class="img"><img src="totob12icon.png" alt="Logo" height="44"></a></li>
+    <li><a class="icon" href="https://totob12.github.io/index.html"><span class="material-symbols-outlined">
+    home</span></a></li>
+    <li><a class="icon active" href="https://TotoB12-Chat.totob12.repl.co/"><span class="material-symbols-outlined">
+    forum</span><h10 class=cc>Social</h10></a></li>
+    <li><a class="icon" href="https://totob12.github.io/things/inpainting-forward.html"><span class="material-symbols-outlined">
+    format_paint</span><h10 class="cc">Paint</h10></a></li>
+    <li><a class="icon" href="https://chill-radio.totob12.repl.co/"><span class="material-symbols-outlined">
+    radio</span><h10 class="cc">Radio</h10></a></li>
+    <li><a class="icon" href="https://totob12.github.io/things/games.html"><span class="material-symbols-outlined">
+    sports_esports</span><h10 class="cc">Games</h10></a></li>
+    <li><a class="icon" href="https://totob12.github.io/things/sites.html"><span class="material-symbols-outlined">
+    handyman</span><h10 class="cc">Random</h10></a></li>
+    <li><a class="icon right" href="https://totob12.github.io/things/feedback.html"><span class="material-symbols-outlined">
+    alternate_email</span></a></li>
+    <li><a class="icon right" href="https://totob12.github.io/things/countdown.html"><span class="material-symbols-outlined">
+    hourglass_empty</span></a></li>
+    </ul>
                 <p class="welcome">Welcome, <b><?php echo $_SESSION['name']; ?></b></p><br>
             </div>
             <div id="menu">

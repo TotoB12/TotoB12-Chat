@@ -51,6 +51,16 @@
   float: right;
   }
 
+  .cc {
+    margin: 0;
+    padding: 5px 0;
+    padding-bottom: 0;
+    padding-left: 2px;
+    float: right;
+    color: #c9c7c7;
+    font-size: 14px
+  }
+
   button { 
    padding: 16px 16px; 
    border-radius: 12px; 
@@ -218,14 +228,4 @@
 
   .msgln span.left-info {
     color: #f44336;
-  }
-
-  .cc {
-    margin: 0;
-    padding: 5px 0;
-    padding-bottom: 0;
-    padding-left: 2px;
-    float: right;
-    color: #c9c7c7;
-    font-size: 14px
   }
