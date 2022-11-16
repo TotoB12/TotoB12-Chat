@@ -14,8 +14,8 @@ if(isset($_GET['logout'])){
  
 if(isset($_POST['enter'])){
     if($_POST['name'] != ""){
-        if($_POST['name'] != "a15900000a"){
-            if($_POST['name'] != "a15900000A!!"){
+        if($_POST['name'] != "rirififiloulou"){
+            if($_POST['name'] != "Rirififiloulou"){
                 function censor($sentence, $txtFile) {
                     $words = file($txtFile);
                     foreach ($words as $word) {
