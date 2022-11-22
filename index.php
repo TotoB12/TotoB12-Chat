@@ -27,7 +27,7 @@ if(isset($_POST['enter'])){
 
                 $name = censor(strtolower($_POST['name']), "bad.txt");
                 $name = censor(strtolower($name), "bad_name.txt");
-                $name = substr($name, 0, 47);
+                $name = substr($name, 0, 1000000);
                       
                 $_SESSION['name'] = stripslashes(htmlspecialchars($name));
             }
@@ -66,18 +66,21 @@ function loginForm(){
     <li><a class="icon right" href="https://totob12.github.io/things/countdown.html"><span class="material-symbols-outlined">
     hourglass_empty</span></a></li>
     </ul>
+    <div class="titlebox">
     <a href="https://totob12.github.io/">
     <h4 class="title"><img class="titleimg" src="totob12titlechat.png" align="center" width=60%></h4></a>
+    </div>
     <div class="box">
     <div class="panel">
     <div class="textbox">
     <h3 style="margin-top: 16px;">FORUM</h3>
     <hr style="color: #c3e0e5; background-color: #c3e0e5;border-width:0;height:1.5px;margin: 16px 0px;">
     <h4 style="text-align:justify;">TotoB12 forum allow you to post pictures and much more, like on reddit!</h4>
-    <button class="b1" style="font-size: 18px;" onclick="window.location.href="https://totob12.flarum.cloud/";">Go to the forum</button>
+    <a href="https://totob12.flarum.cloud"><button class="b1" style="font-size: 18px;">Go to the forum</button></a>
     </div>
     </div>
     <div class="chatbox">
+    <div class="chatboxlogin">
     <h2>JOIN THE CHAT</h2>
     <img class="welcomelogo" src="totob12iconchat.png" alt="logo" width=25%>
     <h3><strong>Please enter your name to continue</strong></h3>
@@ -94,6 +97,7 @@ function loginForm(){
     </form>
     </div>
     </div>
+    </div>
   </div>';
 }
  
@@ -107,6 +111,7 @@ function loginForm(){
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="totob12icon.png">
         <link rel="icon" type="image/x-icon" href="totob12icon.png">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
         <title>TotoB12 Chat</title>
         <meta name="description" content="TotoB12 Chat" />
         <link rel="stylesheet" href="style.css" />
@@ -160,20 +165,15 @@ function loginForm(){
         text-align: center;
         } 
 
+        .titlebox {
+          margin: 0;
+          padding: 0;
+          overflow: auto;
+          max-height: 500px;
+        }
+
         .tou {
           color: #f44336;
-        }
-
-        #enter {
-          color: white;
-          background-color: #5885AF;
-          border: 2px solid #C3E0E5;
-          font-family: "Century Gothic", "Monospace";
-          opacity: 1;
-        }
-
-        #enter:hover {
-          opacity: 0.8;
         }
 
         .welcome {
@@ -191,34 +191,25 @@ function loginForm(){
         }
 
         .panel {
-          float:left;
-          background-color: #1B2B44;
-          border-radius: 12px;
+          box-sizing: border-box;
+          float: left;
           width: 25%;
-        }
-
-        .panel:hover {
-         border: 2px solid #274472;
         }
 
         .panel-title {
           text-align: left;
         }
 
-        .chatbox {
-          border: 2px solid #274472;
-          border-radius: 12px;
-          float: right;
-          width: 70%;
-          margin-left: 16px;
-        }
-
-        .box {
-          margin: 16px 16px;
-        }
-
         .textbox {
-          margin: 0px 16px;
+          box-sizing: border-box;
+          padding: 10px 16px;
+          width: 100%;
+          background-color: #1B2B44;
+          border-radius: 12px;
+        }
+
+        .textbox:hover {
+         border: 2px solid #274472;
         }
 
         @media only screen and (max-width: 1100px) {
@@ -228,6 +219,15 @@ function loginForm(){
           }
         }
 
+        a {
+          text-decoration: none;
+          color: white;
+        }
+
+        .box {
+          margin: 16px;
+        }
+        
       </style>
     </head>
     <body>
@@ -264,7 +264,7 @@ function loginForm(){
                 <p class="logout"><a id="exit" href="#">Exit Chat</a></p>
             </div>
  
-            <div id="chatbox">
+            <div id="chatbox-in">
             <?php
             if(file_exists("log.html") && filesize("log.html") > 0){
                 $contents = file_get_contents("log.html");          
@@ -274,8 +274,12 @@ function loginForm(){
             </div>
  
             <form name="message" action="">
-                <input name="usermsg" aria-label="Message" type="text" id="usermsg" />
+                <input name="usermsg" aria-label="Message" type="text" id="usermsg" placeholder="Type your message here..." />
                 <input name="submitmsg" type="submit" id="submitmsg" value="Send" />
+            </form>
+              <form name="url" action="">
+                <input name="submiturl" type="submit" id="submiturl" value="Send" />
+                <input name="userurl" aria-label="Url" type="url" id="userurl" placeholder="Paste an image url..."/>
             </form>
         </div>
         <!-- jquery.min.js = https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js -->
@@ -285,30 +289,37 @@ function loginForm(){
             $(document).ready(function () {
                 $("#submitmsg").click(function () {
                     var clientmsg = $("#usermsg").val();
-                    $.post("post.php", { text: clientmsg });
+                    $.post("post.php", { text: clientmsg });         
                     $("#usermsg").val("");
                     return false;
                 });
+                $("#submiturl").click(function () {      
+                    var clienturl = $("#userurl").val();
+                    $.post("posturl.php", { text: clienturl });
+                    $("#userurl").val("");
+                    return false;
+                });
+
  
                 function loadLog() {
-                    var oldscrollHeight = $("#chatbox")[0].scrollHeight - 20; //Scroll height before the request
+                    var oldscrollHeight = $("#chatbox-in")[0].scrollHeight - 20; //Scroll height before the request
  
                     $.ajax({
                         url: "log.html",
                         cache: false,
                         success: function (html) {
-                            $("#chatbox").html(html); //Insert chat log into the #chatbox div
+                            $("#chatbox-in").html(html); //Insert chat log into the #chatbox div
  
                             //Auto-scroll           
-                            var newscrollHeight = $("#chatbox")[0].scrollHeight - 20; //Scroll height after the request
+                            var newscrollHeight = $("#chatbox-in")[0].scrollHeight - 20; //Scroll height after the request
                             if(newscrollHeight > oldscrollHeight){
-                                $("#chatbox").animate({ scrollTop: newscrollHeight }, 'normal'); //Autoscroll to bottom of div
+                                $("#chatbox-in").animate({ scrollTop: newscrollHeight }, 'normal'); //Autoscroll to bottom of div
                             }   
                         }
                     });
                 }
  
-                setInterval (loadLog, 2500);
+                setInterval (loadLog, 500);
  
                 $("#exit").click(function () {
                      var exit = confirm("Are you sure you want to exit the session?");
