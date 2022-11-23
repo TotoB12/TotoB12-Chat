@@ -293,11 +293,11 @@
 ::-webkit-scrollbar-thumb {
   background: #5885AF; 
   border-radius: 6px;
-  cursor: scrollable;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #134074; 
   border-radius: 6px;
+  cursor: move;
 }

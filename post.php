@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(isset($_SESSION['name'])){
-     
+
     function censor($sentence, $txtFile) {
         $words = file($txtFile);
         foreach ($words as $word) {

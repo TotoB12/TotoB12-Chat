@@ -272,7 +272,6 @@ function loginForm(){
             }
             ?>
             </div>
- 
             <form name="message" action="">
                 <input name="usermsg" aria-label="Message" type="text" id="usermsg" placeholder="Type your message here..." />
                 <input name="submitmsg" type="submit" id="submitmsg" value="Send" />
@@ -281,20 +280,43 @@ function loginForm(){
                 <input name="submiturl" type="submit" id="submiturl" value="Send" />
                 <input name="userurl" aria-label="Url" type="url" id="userurl" placeholder="Paste an image url..."/>
             </form>
+            <div id="notifbox">
+
+            </div>
         </div>
         <!-- jquery.min.js = https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js -->
         <script type="text/javascript" src=jquery.min.js></script>
         <script type="text/javascript">
             // jQuery Document
             $(document).ready(function () {
+                function loadNotif() {
+                    var oldscrollHeight = $("#notifbox")[0].scrollHeight - 20; //Scroll height before the request
+ 
+                    $.ajax({
+                        url: "notif.html",
+                        cache: false,
+                        success: function (html) {
+                            $("#notifbox").html(html); //Insert chat log into the #chatbox div
+ 
+                            //Auto-scroll           
+                            var newscrollHeight = $("#notifbox")[0].scrollHeight - 20; //Scroll height after the request
+                            if(newscrollHeight > oldscrollHeight){
+                                $("#notifbox").animate({ scrollTop: newscrollHeight }, 'normal'); //Autoscroll to bottom of div
+                            }   
+                        }
+                    });
+                }
+              
                 $("#submitmsg").click(function () {
                     var clientmsg = $("#usermsg").val();
-                    $.post("post.php", { text: clientmsg });         
+                    $.post("post.php", { text: clientmsg });   
+                    loadNotif()
                     $("#usermsg").val("");
                     return false;
                 });
                 $("#submiturl").click(function () {      
                     var clienturl = $("#userurl").val();
+                   loadNotif()
                     $.post("posturl.php", { text: clienturl });
                     $("#userurl").val("");
                     return false;
@@ -318,7 +340,7 @@ function loginForm(){
                         }
                     });
                 }
- 
+                
                 setInterval (loadLog, 500);
  
                 $("#exit").click(function () {
