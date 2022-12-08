@@ -28,8 +28,10 @@ if(isset($_POST['enter'])){
                 $name = censor(strtolower($_POST['name']), "bad.txt");
                 $name = censor(strtolower($name), "bad_name.txt");
                 $name = substr($name, 0, 1000000);
-                      
+     
                 $_SESSION['name'] = stripslashes(htmlspecialchars($name));
+
+              
             }
             else{
                 $_SESSION['name'] = stripslashes(htmlspecialchars("Antonin"));
@@ -38,10 +40,12 @@ if(isset($_POST['enter'])){
         else{
             $_SESSION['name'] = stripslashes(htmlspecialchars("ADMIN"));
         }
-   }
-   else{
+   } else {
        echo '<span class="error">Please type in a different name</span>';
    }
+  $profileurl = strtolower($_POST['profileurlimg']);
+                      
+  $_SESSION['profileurl'] = stripslashes(htmlspecialchars($profileurl));
 }
 
 function loginForm(){
@@ -51,21 +55,38 @@ function loginForm(){
     <li><a class="img"><img src="totob12icon.png" alt="Logo" height="44"></a></li>
     <li><a class="icon" href="https://totob12.github.io/index.html"><span class="material-symbols-outlined">
     home</span></a></li>
-    <li><a class="icon active" href="https://TotoB12-Chat.totob12.repl.co/"><span class="material-symbols-outlined">
+    <li class="screen"><a class="icon active" href="https://TotoB12-Chat.totob12.repl.co/"><span class="material-symbols-outlined">
     forum</span><h10 class=cc>Social</h10></a></li>
-    <li><a class="icon" href="https://totob12.github.io/things/inpainting-forward.html"><span class="material-symbols-outlined">
+    <li class="screen"><a class="icon" href="https://totob12.github.io/things/inpainting-forward.html"><span class="material-symbols-outlined">
     format_paint</span><h10 class="cc">Paint</h10></a></li>
-    <li><a class="icon" href="https://chill-radio.totob12.repl.co/"><span class="material-symbols-outlined">
+    <li class="screen"><a class="icon" href="https://chill-radio.totob12.repl.co/"><span class="material-symbols-outlined">
     radio</span><h10 class="cc">Radio</h10></a></li>
-    <li><a class="icon" href="https://totob12.github.io/things/games.html"><span class="material-symbols-outlined">
+    <li class="screen"><a class="icon" href="https://totob12.github.io/things/games.html"><span class="material-symbols-outlined">
     sports_esports</span><h10 class="cc">Games</h10></a></li>
-    <li><a class="icon" href="https://totob12.github.io/things/sites.html"><span class="material-symbols-outlined">
+    <li class="screen"><a class="icon" href="https://totob12.github.io/things/sites.html"><span class="material-symbols-outlined">
     handyman</span><h10 class="cc">Random</h10></a></li>
-    <li><a class="icon right" href="https://totob12.github.io/things/feedback.html"><span class="material-symbols-outlined">
+    <li class="screen"><a class="icon right" href="https://totob12.github.io/things/feedback.html"><span class="material-symbols-outlined">
     alternate_email</span></a></li>
-    <li><a class="icon right" href="https://totob12.github.io/things/countdown.html"><span class="material-symbols-outlined">
+    <li class="screen"><a class="icon right" href="https://totob12.github.io/things/countdown.html"><span class="material-symbols-outlined">
     hourglass_empty</span></a></li>
-    </ul>
+    <div class="dropdown" style="float:right;">
+  <button class="dropbtn"><span class="material-symbols-outlined">menu</span></button>
+
+  <div class="dropdown-content">
+  <a href="https://totob12.github.io/index.html"><span class="material-symbols-outlined">home</span><div class="dropdowncc">Home</div></a>
+  <a class="blanka" href=""></a>
+  <a href="https://TotoB12-Chat.totob12.repl.co/"><span class="material-symbols-outlined">forum</span><div class="dropdowncc">Social</div></a>
+  <a href="https://totob12.github.io/things/inpainting-forward.html"><span class="material-symbols-outlined">format_paint</span><div class="dropdowncc">Paint</div></a>
+  <a href="https://chill-radio.totob12.repl.co/"><span class="material-symbols-outlined">radio</span><div class="dropdowncc">Radio</div></a>
+  <a href="https://totob12.github.io/things/games.html"><span class="material-symbols-outlined">sports_esports</span><div class="dropdowncc">Games</div></a>
+  <a href="https://totob12.github.io/things/sites.html"><span class="material-symbols-outlined">handyman</span><div class="dropdowncc">Random</div></a>
+  <a class="blanka" href=""></a>
+  <a href="https://totob12.github.io/things/countdown.html"><span class="material-symbols-outlined">hourglass_empty</span><div class="dropdowncc">Countdown</div></a>
+  <a href="https://totob12.github.io/things/feedback.html"><span class="material-symbols-outlined">alternate_email</span><div class="dropdowncc">Contact</div></a>
+  </div>
+</div>
+    </ul> 
+
     <div class="titlebox">
     <a href="https://totob12.github.io/">
     <h4 class="title"><img class="titleimg" src="totob12titlechat.png" align="center" width=60%></h4></a>
@@ -75,24 +96,24 @@ function loginForm(){
     <div class="textbox">
     <h3 style="margin-top: 16px;">FORUM</h3>
     <hr style="color: #c3e0e5; background-color: #c3e0e5;border-width:0;height:1.5px;margin: 16px 0px;">
-    <h4 style="text-align:justify;">TotoB12 forum allow you to post pictures and much more, like on reddit!</h4>
+    <h4>TotoB12 forum allow you to post pictures and much more, like on reddit!</h4>
     <a href="https://totob12.flarum.cloud"><button class="b1" style="font-size: 18px;">Go to the forum</button></a>
     </div>
     </div>
     <div class="chatbox">
     <div class="chatboxlogin">
-    <h2>JOIN THE CHAT</h2>
+    <h2><strong>JOIN THE CHAT</strong></h2>
     <img class="welcomelogo" src="totob12iconchat.png" alt="logo" width=25%>
-    <h3><strong>Please enter your name to continue</strong></h3>
+    <h3>Please enter your name to continue</h3>
     <br>
-    <h4>This server is under constant moderation.</h4>
-    <h4>It\'s improper usage will result in a ban.</h4>
-    <h4>Every message is permanent.</h4>
-    <h4>To contact Admin, please mention <strong>@admin</strong> in your message.</h4>
-    <h4>By using this service, you accept it\'s <a class="tou" href = "terms.html" target = "_self">Terms Of Use.</a></h4>
+    <p>This server is under constant moderation.<br>
+    It\'s improper usage will result in a ban.<br>
+    Every message is permanent.<br>
+    To contact Admin, please mention <strong>@admin</strong> in your message.<br>
+    By using this service, you accept it\'s <a class="tou" href = "terms.html" target = "_self">Terms Of Use.</a></p>
     <form action="index.php" method="post">
-      <label class="text" for="name">Name →</label>
-      <input class="text" type="text" name="name" id="name" />
+      <input class="text" type="text" name="name" id="name" placeholder="Enter your name..."/><br><br>
+      <input class="text" type="url" name="profileurlimg" id="profileurlimg" placeholder="Enter profile image url... (optional)"/><br><br>
       <input type="submit" name="enter" id="enter" value="ENTER" />
     </form>
     </div>
@@ -112,123 +133,11 @@ function loginForm(){
         <link rel="apple-touch-icon" href="totob12icon.png">
         <link rel="icon" type="image/x-icon" href="totob12icon.png">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
         <title>TotoB12 Chat</title>
         <meta name="description" content="TotoB12 Chat" />
         <link rel="stylesheet" href="style.css" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
-      <style>
-
-        body {
-          background-color: #1a1d21; 
-          margin: 0px;
-        }
-
-        #loginform {
-          background-color: #1a1d21;
-        }
-
-        h4 {
-          color: #C3E0E5;
-          font-family: "Century Gothic", "Monospace";
-        }
-
-        h3 {
-          color: #C3E0E5;
-          font-family: "Century Gothic", "Monospace";
-          font-size: 22px;
-        }
-
-        h2 {
-          color: #C3E0E5;
-          font-family: "Century Gothic", "Monospace";
-          font-size: 22px;
-          margin-top: 16px;
-        }
-        
-        .text {
-          color: white;
-          font-family: "Century Gothic", "Monospace";
-        }
-
-        .welcomelogo {
-          margin: 16px 16px;
-        }
-
-        .title { 
-        background-color: #274472;
-        color: #C3E0E5;
-        margin: 0px; 
-        padding: 0 0;
-        font-family: "Century Gothic", "Monospace";
-        font-size: 64px;
-        text-align: center;
-        } 
-
-        .titlebox {
-          margin: 0;
-          padding: 0;
-          overflow: auto;
-          max-height: 500px;
-        }
-
-        .tou {
-          color: #f44336;
-        }
-
-        .welcome {
-          background-color: #274472;
-          color: #C3E0E5;
-          padding: 32px 16px; 
-          margin: 0px; 
-          font-family: "Century Gothic", "Monospace";
-          font-size: 64px;
-          text-align: center;
-        }
-
-        .logout {
-          text-align: center;
-        }
-
-        .panel {
-          box-sizing: border-box;
-          float: left;
-          width: 25%;
-        }
-
-        .panel-title {
-          text-align: left;
-        }
-
-        .textbox {
-          box-sizing: border-box;
-          padding: 10px 16px;
-          width: 100%;
-          background-color: #1B2B44;
-          border-radius: 12px;
-        }
-
-        .textbox:hover {
-         border: 2px solid #274472;
-        }
-
-        @media only screen and (max-width: 1100px) {
-  .panel, .chatbox {
-    width: 100%;
-    margin-bottom: 16px;
-          }
-        }
-
-        a {
-          text-decoration: none;
-          color: white;
-        }
-
-        .box {
-          margin: 16px;
-        }
-        
-      </style>
     </head>
     <body>
     <?php
@@ -239,31 +148,46 @@ function loginForm(){
     ?>
         <div id="wrapper">
             <div id="menu">
-              <ul>
+                  <ul>
     <li><a class="img"><img src="totob12icon.png" alt="Logo" height="44"></a></li>
     <li><a class="icon" href="https://totob12.github.io/index.html"><span class="material-symbols-outlined">
     home</span></a></li>
-    <li><a class="icon active" href="https://TotoB12-Chat.totob12.repl.co/"><span class="material-symbols-outlined">
+    <li class="screen"><a class="icon active" href="https://TotoB12-Chat.totob12.repl.co/"><span class="material-symbols-outlined">
     forum</span><h10 class=cc>Social</h10></a></li>
-    <li><a class="icon" href="https://totob12.github.io/things/inpainting-forward.html"><span class="material-symbols-outlined">
+    <li class="screen"><a class="icon" href="https://totob12.github.io/things/inpainting-forward.html"><span class="material-symbols-outlined">
     format_paint</span><h10 class="cc">Paint</h10></a></li>
-    <li><a class="icon" href="https://chill-radio.totob12.repl.co/"><span class="material-symbols-outlined">
+    <li class="screen"><a class="icon" href="https://chill-radio.totob12.repl.co/"><span class="material-symbols-outlined">
     radio</span><h10 class="cc">Radio</h10></a></li>
-    <li><a class="icon" href="https://totob12.github.io/things/games.html"><span class="material-symbols-outlined">
+    <li class="screen"><a class="icon" href="https://totob12.github.io/things/games.html"><span class="material-symbols-outlined">
     sports_esports</span><h10 class="cc">Games</h10></a></li>
-    <li><a class="icon" href="https://totob12.github.io/things/sites.html"><span class="material-symbols-outlined">
+    <li class="screen"><a class="icon" href="https://totob12.github.io/things/sites.html"><span class="material-symbols-outlined">
     handyman</span><h10 class="cc">Random</h10></a></li>
-    <li><a class="icon right" href="https://totob12.github.io/things/feedback.html"><span class="material-symbols-outlined">
+    <li class="screen"><a class="icon right" href="https://totob12.github.io/things/feedback.html"><span class="material-symbols-outlined">
     alternate_email</span></a></li>
-    <li><a class="icon right" href="https://totob12.github.io/things/countdown.html"><span class="material-symbols-outlined">
+    <li class="screen"><a class="icon right" href="https://totob12.github.io/things/countdown.html"><span class="material-symbols-outlined">
     hourglass_empty</span></a></li>
+  <div class="dropdown" style="float:right;">
+  <button class="dropbtn"><span class="material-symbols-outlined">menu</span></button>
+  <div class="dropdown-content">
+  <a href="https://totob12.github.io/index.html"><span class="material-symbols-outlined">home</span><div class="dropdowncc">Home</div></a>
+  <a class="blanka" href=""></a>
+  <a href="https://TotoB12-Chat.totob12.repl.co/"><span class="material-symbols-outlined">forum</span><div class="dropdowncc">Social</div></a>
+  <a href="https://totob12.github.io/things/inpainting-forward.html"><span class="material-symbols-outlined">format_paint</span><div class="dropdowncc">Paint</div></a>
+  <a href="https://chill-radio.totob12.repl.co/"><span class="material-symbols-outlined">radio</span><div class="dropdowncc">Radio</div></a>
+  <a href="https://totob12.github.io/things/games.html"><span class="material-symbols-outlined">sports_esports</span><div class="dropdowncc">Games</div></a>
+  <a href="https://totob12.github.io/things/sites.html"><span class="material-symbols-outlined">handyman</span><div class="dropdowncc">Random</div></a>
+  <a class="blanka" href=""></a>
+  <a href="https://totob12.github.io/things/countdown.html"><span class="material-symbols-outlined">hourglass_empty</span><div class="dropdowncc">Countdown</div></a>
+  <a href="https://totob12.github.io/things/feedback.html"><span class="material-symbols-outlined">alternate_email</span><div class="dropdowncc">Contact</div></a>
+  </div>
+</div>
     </ul>
                 <p class="welcome">Welcome, <b><?php echo $_SESSION['name']; ?></b></p><br>
             </div>
             <div id="menu">
                 <p class="logout"><a id="exit" href="#">Exit Chat</a></p>
             </div>
- 
+            <div id='gradient'></div>
             <div id="chatbox-in">
             <?php
             if(file_exists("log.html") && filesize("log.html") > 0){
