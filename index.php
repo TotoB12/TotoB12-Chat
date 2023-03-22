@@ -51,46 +51,61 @@ if(isset($_POST['enter'])){
 function loginForm(){
     echo
     '<div id="loginform">
-    <ul>
-    <li><a class="img"><img src="totob12icon.png" alt="Logo" height="44"></a></li>
-    <li><a class="icon" href="https://totob12.github.io/index.html"><span class="material-symbols-outlined">
-    home</span></a></li>
-    <li class="screen"><a class="icon active" href="https://TotoB12-Chat.totob12.repl.co/"><span class="material-symbols-outlined">
-    forum</span><h10 class=cc>Social</h10></a></li>
-    <li class="screen"><a class="icon" href="https://totob12.github.io/things/inpainting-forward.html"><span class="material-symbols-outlined">
-    format_paint</span><h10 class="cc">Paint</h10></a></li>
-    <li class="screen"><a class="icon" href="https://chill-radio.totob12.repl.co/"><span class="material-symbols-outlined">
-    radio</span><h10 class="cc">Radio</h10></a></li>
-    <li class="screen"><a class="icon" href="https://totob12.github.io/things/games.html"><span class="material-symbols-outlined">
-    sports_esports</span><h10 class="cc">Games</h10></a></li>
-    <li class="screen"><a class="icon" href="https://totob12.github.io/things/sites.html"><span class="material-symbols-outlined">
-    handyman</span><h10 class="cc">Random</h10></a></li>
-    <li class="screen"><a class="icon right" href="https://totob12.github.io/things/feedback.html"><span class="material-symbols-outlined">
-    alternate_email</span></a></li>
-    <li class="screen"><a class="icon right" href="https://totob12.github.io/things/countdown.html"><span class="material-symbols-outlined">
-    hourglass_empty</span></a></li>
-    <div class="dropdown" style="float:right;">
-  <button class="dropbtn"><span class="material-symbols-outlined">menu</span></button>
+    <!-- ---- ---- NAV ---- ---- -->
+  
+<nav id="side">
+<button id="side-close" onclick="side()"><span class="material-symbols-outlined">close</span></button>
+<section>
+    <a href="https://totob12.github.io/index.html"><span class="material-symbols-outlined">home</span><div class="dropdowncc">Home</div></a>
+    <a class="blanka" href=""></a>
+    <a href="https://TotoB12-Chat.totob12.repl.co/"><span class="material-symbols-outlined">forum</span><div class="dropdowncc">Social</div></a>
+    <a href="https://totob12.github.io/things/inpainting-forward.html"><span class="material-symbols-outlined">format_paint</span><div class="dropdowncc">Paint</div></a>
+    <a href="https://chill-radio.totob12.repl.co/"><span class="material-symbols-outlined">radio</span><div class="dropdowncc">Radio</div></a>
+    <a href="https://totob12.github.io/things/games.html"><span class="material-symbols-outlined">sports_esports</span><div class="dropdowncc">Games</div></a>
+    <a href="https://totob12.github.io/things/sites.html"><span class="material-symbols-outlined">handyman</span><div class="dropdowncc">Random</div></a>
+    <a href="https://totob12.github.io/things/countdown.html"><span class="material-symbols-outlined">hourglass_empty</span><div class="dropdowncc">Countdown</div></a>
+</section>
+</nav>
+  
+<nav>
+  <button id="side-btn" onclick="side(1)"/><span class="material-symbols-outlined">menu</span></button>
+  <div class="nav-main-section">
+    <a class="home active" href="https://totob12.github.io/index.html"><span class="material-symbols-outlined">home</span></a>
+    <a href="https://TotoB12-Chat.totob12.repl.co/"><span class="material-symbols-outlined">forum</span>Social</a>
+    <a href="https://totob12.github.io/things/inpainting-forward.html"><span class="material-symbols-outlined">format_paint</span>Paint</a>
+    <a href="https://totob12.github.io/things/radio.html"><span class="material-symbols-outlined">radio</span>Radio</a>
+    <a href="https://totob12.github.io/things/games.html"><span class="material-symbols-outlined">sports_esports</span>Games</a>
+    <a href="https://totob12.github.io/things/sites.html"><span class="material-symbols-outlined">handyman</span>Random</a>
+    <a href="https://totob12.github.io/things/countdown.html"><span class="material-symbols-outlined">hourglass_empty</span>Countdown</a>
+  </div>
+  <div class="nav-section ns3">
+  <button id="setting-btn" onclick="setting(1)"/><span class="material-symbols-outlined">settings</span></button>
+  <img class="img" src="totob12icon.png" alt="Logo" height="48px">
+  </div>
+</nav>
 
-  <div class="dropdown-content">
-  <a href="https://totob12.github.io/index.html"><span class="material-symbols-outlined">home</span><div class="dropdowncc">Home</div></a>
-  <a class="blanka" href=""></a>
-  <a href="https://TotoB12-Chat.totob12.repl.co/"><span class="material-symbols-outlined">forum</span><div class="dropdowncc">Social</div></a>
-  <a href="https://totob12.github.io/things/inpainting-forward.html"><span class="material-symbols-outlined">format_paint</span><div class="dropdowncc">Paint</div></a>
-  <a href="https://chill-radio.totob12.repl.co/"><span class="material-symbols-outlined">radio</span><div class="dropdowncc">Radio</div></a>
-  <a href="https://totob12.github.io/things/games.html"><span class="material-symbols-outlined">sports_esports</span><div class="dropdowncc">Games</div></a>
-  <a href="https://totob12.github.io/things/sites.html"><span class="material-symbols-outlined">handyman</span><div class="dropdowncc">Random</div></a>
-  <a class="blanka" href=""></a>
-  <a href="https://totob12.github.io/things/countdown.html"><span class="material-symbols-outlined">hourglass_empty</span><div class="dropdowncc">Countdown</div></a>
-  <a href="https://totob12.github.io/things/feedback.html"><span class="material-symbols-outlined">alternate_email</span><div class="dropdowncc">Contact</div></a>
+<nav id="setting">
+<button id="setting-close" onclick="setting()"><span class="material-symbols-outlined">close</span></button>
+  <section>
+    <h1>Settings</h1>
+    <a href="https://totob12.github.io/things/feedback.html"><span class="material-symbols-outlined">alternate_email</span>Contact and help</a>
+    <div>
+      <button id="dark" onclick="dark()"><span class="material-symbols-outlined">dark_mode</span></button>
+      <button id="light" onclick="light()"><span class="material-symbols-outlined">light_mode</span></button>
+    </div>
+  </section>
+</nav>
+
+<!-- ---- ---- HEADER ---- ---- -->
+
+<div class="header">
+  <div class="header-wrap">
+  <h1 translate="no">TOTOB12<img src="totob12icon.png" width=100px>CHAT</h1>
   </div>
 </div>
-    </ul> 
 
-    <div class="titlebox">
-    <a href="https://totob12.github.io/">
-    <h4 class="title"><img class="titleimg" src="totob12titlechat.png" align="center" width=60%></h4></a>
-    </div>
+<!-- ---- ---- OTHER ---- ---- -->
+
     <div class="box">
     <div class="panel">
     <div class="textbox">
@@ -119,6 +134,39 @@ function loginForm(){
     </div>
     </div>
     </div>
+  <script>
+      //sidebar
+function side (open) {
+  if (open) {
+    document.getElementById("side").classList.add("show");
+    document.getElementById("setting").classList.remove("show");
+  } else {
+    document.getElementById("side").classList.remove("show");
+  }
+}
+
+//setting
+function setting (open) {
+  if (open) {
+    document.getElementById("setting").classList.add("show");
+    document.getElementById("side").classList.remove("show");
+  } else {
+    document.getElementById("setting").classList.remove("show");
+  }
+}
+
+//sidebar and setting close on click
+var main = document.getElementById("main");
+
+main.addEventListener("click", function(){
+    if(document.getElementById("setting").className == "show") {
+        document.getElementById("setting").classList.remove("show");
+    }
+    if(document.getElementById("side").className == "show") {
+        document.getElementById("side").classList.remove("show");
+    }
+});
+</script>
   </div>';
 }
  
@@ -138,6 +186,7 @@ function loginForm(){
         <meta name="description" content="TotoB12 Chat" />
         <link rel="stylesheet" href="style.css" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+      <link rel="stylesheet" href="https://use.typekit.net/wvu5fqb.css">
     </head>
     <body>
     <?php
@@ -146,61 +195,109 @@ function loginForm(){
     }
     else {
     ?>
-        <div id="wrapper">
-            <div id="menu">
-                  <ul>
-    <li><a class="img"><img src="totob12icon.png" alt="Logo" height="44"></a></li>
-    <li><a class="icon" href="https://totob12.github.io/index.html"><span class="material-symbols-outlined">
-    home</span></a></li>
-    <li class="screen"><a class="icon active" href="https://TotoB12-Chat.totob12.repl.co/"><span class="material-symbols-outlined">
-    forum</span><h10 class=cc>Social</h10></a></li>
-    <li class="screen"><a class="icon" href="https://totob12.github.io/things/inpainting-forward.html"><span class="material-symbols-outlined">
-    format_paint</span><h10 class="cc">Paint</h10></a></li>
-    <li class="screen"><a class="icon" href="https://chill-radio.totob12.repl.co/"><span class="material-symbols-outlined">
-    radio</span><h10 class="cc">Radio</h10></a></li>
-    <li class="screen"><a class="icon" href="https://totob12.github.io/things/games.html"><span class="material-symbols-outlined">
-    sports_esports</span><h10 class="cc">Games</h10></a></li>
-    <li class="screen"><a class="icon" href="https://totob12.github.io/things/sites.html"><span class="material-symbols-outlined">
-    handyman</span><h10 class="cc">Random</h10></a></li>
-    <li class="screen"><a class="icon right" href="https://totob12.github.io/things/feedback.html"><span class="material-symbols-outlined">
-    alternate_email</span></a></li>
-    <li class="screen"><a class="icon right" href="https://totob12.github.io/things/countdown.html"><span class="material-symbols-outlined">
-    hourglass_empty</span></a></li>
-  <div class="dropdown" style="float:right;">
-  <button class="dropbtn"><span class="material-symbols-outlined">menu</span></button>
-  <div class="dropdown-content">
-  <a href="https://totob12.github.io/index.html"><span class="material-symbols-outlined">home</span><div class="dropdowncc">Home</div></a>
-  <a class="blanka" href=""></a>
-  <a href="https://TotoB12-Chat.totob12.repl.co/"><span class="material-symbols-outlined">forum</span><div class="dropdowncc">Social</div></a>
-  <a href="https://totob12.github.io/things/inpainting-forward.html"><span class="material-symbols-outlined">format_paint</span><div class="dropdowncc">Paint</div></a>
-  <a href="https://chill-radio.totob12.repl.co/"><span class="material-symbols-outlined">radio</span><div class="dropdowncc">Radio</div></a>
-  <a href="https://totob12.github.io/things/games.html"><span class="material-symbols-outlined">sports_esports</span><div class="dropdowncc">Games</div></a>
-  <a href="https://totob12.github.io/things/sites.html"><span class="material-symbols-outlined">handyman</span><div class="dropdowncc">Random</div></a>
-  <a class="blanka" href=""></a>
-  <a href="https://totob12.github.io/things/countdown.html"><span class="material-symbols-outlined">hourglass_empty</span><div class="dropdowncc">Countdown</div></a>
-  <a href="https://totob12.github.io/things/feedback.html"><span class="material-symbols-outlined">alternate_email</span><div class="dropdowncc">Contact</div></a>
+      
+<nav id="side">
+<button id="side-close" onclick="side()"><span class="material-symbols-outlined">close</span></button>
+<section>
+    <a href="https://totob12.github.io/index.html"><span class="material-symbols-outlined">home</span><div class="dropdowncc">Home</div></a>
+    <a class="blanka" href=""></a>
+    <a href="https://TotoB12-Chat.totob12.repl.co/"><span class="material-symbols-outlined">forum</span><div class="dropdowncc">Social</div></a>
+    <a href="https://totob12.github.io/things/inpainting-forward.html"><span class="material-symbols-outlined">format_paint</span><div class="dropdowncc">Paint</div></a>
+    <a href="https://chill-radio.totob12.repl.co/"><span class="material-symbols-outlined">radio</span><div class="dropdowncc">Radio</div></a>
+    <a href="https://totob12.github.io/things/games.html"><span class="material-symbols-outlined">sports_esports</span><div class="dropdowncc">Games</div></a>
+    <a href="https://totob12.github.io/things/sites.html"><span class="material-symbols-outlined">handyman</span><div class="dropdowncc">Random</div></a>
+    <a href="https://totob12.github.io/things/countdown.html"><span class="material-symbols-outlined">hourglass_empty</span><div class="dropdowncc">Countdown</div></a>
+</section>
+</nav>
+  
+<nav>
+  <button id="side-btn" onclick="side(1)"/><span class="material-symbols-outlined">menu</span></button>
+  <div class="nav-main-section">
+    <a class="home active" href="https://totob12.github.io/index.html"><span class="material-symbols-outlined">home</span></a>
+    <a href="https://TotoB12-Chat.totob12.repl.co/"><span class="material-symbols-outlined">forum</span>Social</a>
+    <a href="https://totob12.github.io/things/inpainting-forward.html"><span class="material-symbols-outlined">format_paint</span>Paint</a>
+    <a href="https://totob12.github.io/things/radio.html"><span class="material-symbols-outlined">radio</span>Radio</a>
+    <a href="https://totob12.github.io/things/games.html"><span class="material-symbols-outlined">sports_esports</span>Games</a>
+    <a href="https://totob12.github.io/things/sites.html"><span class="material-symbols-outlined">handyman</span>Random</a>
+    <a href="https://totob12.github.io/things/countdown.html"><span class="material-symbols-outlined">hourglass_empty</span>Countdown</a>
   </div>
-</div>
-    </ul>
-                <p class="welcome">Welcome, <b><?php echo $_SESSION['name']; ?></b></p><br>
+  <div class="nav-section ns3">
+  <button id="setting-btn" onclick="setting(1)"/><span class="material-symbols-outlined">settings</span></button>
+  <img class="img" src="totob12icon.png" alt="Logo" height="48px">
+  </div>
+</nav>
+
+<nav id="setting">
+<button id="setting-close" onclick="setting()"><span class="material-symbols-outlined">close</span></button>
+  <section>
+    <h1>Settings</h1>
+    <a href="https://totob12.github.io/things/feedback.html"><span class="material-symbols-outlined">alternate_email</span>Contact and help</a>
+    <div>
+      <button id="dark" onclick="dark()"><span class="material-symbols-outlined">dark_mode</span></button>
+      <button id="light" onclick="light()"><span class="material-symbols-outlined">light_mode</span></button>
+    </div>
+  </section>
+</nav>
+
+<script>
+      //sidebar
+function side (open) {
+  if (open) {
+    document.getElementById("side").classList.add("show");
+    document.getElementById("setting").classList.remove("show");
+  } else {
+    document.getElementById("side").classList.remove("show");
+  }
+}
+
+//setting
+function setting (open) {
+  if (open) {
+    document.getElementById("setting").classList.add("show");
+    document.getElementById("side").classList.remove("show");
+  } else {
+    document.getElementById("setting").classList.remove("show");
+  }
+}
+
+//sidebar and setting close on click
+var main = document.getElementById("main");
+
+main.addEventListener("click", function(){
+    if(document.getElementById("setting").className == "show") {
+        document.getElementById("setting").classList.remove("show");
+    }
+    if(document.getElementById("side").className == "show") {
+        document.getElementById("side").classList.remove("show");
+    }
+});
+</script>
+
+          <div id="wrapper">
+      
+            <div class="header">
+              <div class="header-wrap">
+                <h1 translate="no">Welcome, <?php echo $_SESSION['name']; ?></h1>
+              </div>
             </div>
-            <div id="menu">
-                <p class="logout"><a id="exit" href="#">Exit Chat</a></p>
-            </div>
+            
+            <a id="exit" href="#">Exit Chat</a>
             <div id='gradient'></div>
             <div id="chatbox-in">
+      
             <?php
             if(file_exists("log.html") && filesize("log.html") > 0){
                 $contents = file_get_contents("log.html");          
                 echo $contents;
             }
             ?>
+              
             </div>
-            <form name="message" action="">
+            <form id="msgform" name="message" action="">
                 <input name="usermsg" aria-label="Message" type="text" id="usermsg" placeholder="Type your message here..." />
                 <input name="submitmsg" type="submit" id="submitmsg" value="Send" />
             </form>
-              <form name="url" action="">
+              <form id="urlform" name="url" action="">
                 <input name="submiturl" type="submit" id="submiturl" value="Send" />
                 <input name="userurl" aria-label="Url" type="url" id="userurl" placeholder="Paste an image url..."/>
             </form>
@@ -208,6 +305,7 @@ function loginForm(){
 
             </div>
         </div>
+              
         <!-- jquery.min.js = https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js -->
         <script type="text/javascript" src=jquery.min.js></script>
         <script type="text/javascript">
