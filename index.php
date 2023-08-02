@@ -56,27 +56,27 @@ function loginForm(){
 <nav id="side">
 <button id="side-close" onclick="side()"><span class="material-symbols-outlined">close</span></button>
 <section>
-    <a href="https://totob12.github.io/index.html"><span class="material-symbols-outlined">home</span><div class="dropdowncc">Home</div></a>
+    <a href="https://totob12.com"><span class="material-symbols-outlined">home</span><div class="dropdowncc">Home</div></a>
     <a class="blanka" href=""></a>
     <a href="https://TotoB12-Chat.totob12.repl.co/"><span class="material-symbols-outlined">forum</span><div class="dropdowncc">Social</div></a>
-    <a href="https://totob12.github.io/things/inpainting-forward.html"><span class="material-symbols-outlined">format_paint</span><div class="dropdowncc">Paint</div></a>
+    <a href="https://totob12.com/things/inpainting-forward.html"><span class="material-symbols-outlined">format_paint</span><div class="dropdowncc">Paint</div></a>
     <a href="https://chill-radio.totob12.repl.co/"><span class="material-symbols-outlined">radio</span><div class="dropdowncc">Radio</div></a>
-    <a href="https://totob12.github.io/things/games.html"><span class="material-symbols-outlined">sports_esports</span><div class="dropdowncc">Games</div></a>
-    <a href="https://totob12.github.io/things/sites.html"><span class="material-symbols-outlined">handyman</span><div class="dropdowncc">Random</div></a>
-    <a href="https://totob12.github.io/things/countdown.html"><span class="material-symbols-outlined">hourglass_empty</span><div class="dropdowncc">Countdown</div></a>
+    <a href="https://totob12.com/things/games.html"><span class="material-symbols-outlined">sports_esports</span><div class="dropdowncc">Games</div></a>
+    <a href="https://totob12.com/things/sites.html"><span class="material-symbols-outlined">handyman</span><div class="dropdowncc">Random</div></a>
+    <a href="https://totob12.com/things/countdown.html"><span class="material-symbols-outlined">hourglass_empty</span><div class="dropdowncc">Countdown</div></a>
 </section>
 </nav>
   
 <nav>
   <button id="side-btn" onclick="side(1)"/><span class="material-symbols-outlined">menu</span></button>
   <div class="nav-main-section">
-    <a class="home active" href="https://totob12.github.io/index.html"><span class="material-symbols-outlined">home</span></a>
+    <a class="home active" href="https://totob12.com"><span class="material-symbols-outlined">home</span></a>
     <a href="https://TotoB12-Chat.totob12.repl.co/"><span class="material-symbols-outlined">forum</span>Social</a>
-    <a href="https://totob12.github.io/things/inpainting-forward.html"><span class="material-symbols-outlined">format_paint</span>Paint</a>
-    <a href="https://totob12.github.io/things/radio.html"><span class="material-symbols-outlined">radio</span>Radio</a>
-    <a href="https://totob12.github.io/things/games.html"><span class="material-symbols-outlined">sports_esports</span>Games</a>
-    <a href="https://totob12.github.io/things/sites.html"><span class="material-symbols-outlined">handyman</span>Random</a>
-    <a href="https://totob12.github.io/things/countdown.html"><span class="material-symbols-outlined">hourglass_empty</span>Countdown</a>
+    <a href="https://totob12.com/things/inpainting-forward.html"><span class="material-symbols-outlined">format_paint</span>Paint</a>
+    <a href="https://totob12.com/things/radio.html"><span class="material-symbols-outlined">radio</span>Radio</a>
+    <a href="https://totob12.com/things/games.html"><span class="material-symbols-outlined">sports_esports</span>Games</a>
+    <a href="https://totob12.com/things/sites.html"><span class="material-symbols-outlined">handyman</span>Random</a>
+    <a href="https://totob12.com/things/countdown.html"><span class="material-symbols-outlined">hourglass_empty</span>Countdown</a>
   </div>
   <div class="nav-section ns3">
   <button id="setting-btn" onclick="setting(1)"/><span class="material-symbols-outlined">settings</span></button>
@@ -88,7 +88,7 @@ function loginForm(){
 <button id="setting-close" onclick="setting()"><span class="material-symbols-outlined">close</span></button>
   <section>
     <h1>Settings</h1>
-    <a href="https://totob12.github.io/things/feedback.html"><span class="material-symbols-outlined">alternate_email</span>Contact and help</a>
+    <a href="https://totob12.com/things/feedback.html"><span class="material-symbols-outlined">alternate_email</span>Contact and help</a>
     <div>
       <button id="dark" onclick="dark()"><span class="material-symbols-outlined">dark_mode</span></button>
       <button id="light" onclick="light()"><span class="material-symbols-outlined">light_mode</span></button>
@@ -199,27 +199,27 @@ main.addEventListener("click", function(){
 <nav id="side">
 <button id="side-close" onclick="side()"><span class="material-symbols-outlined">close</span></button>
 <section>
-    <a href="https://totob12.github.io/index.html"><span class="material-symbols-outlined">home</span><div class="dropdowncc">Home</div></a>
+    <a href="https://totob12.com"><span class="material-symbols-outlined">home</span><div class="dropdowncc">Home</div></a>
     <a class="blanka" href=""></a>
     <a href="https://TotoB12-Chat.totob12.repl.co/"><span class="material-symbols-outlined">forum</span><div class="dropdowncc">Social</div></a>
-    <a href="https://totob12.github.io/things/inpainting-forward.html"><span class="material-symbols-outlined">format_paint</span><div class="dropdowncc">Paint</div></a>
+    <a href="https://totob12.com/things/inpainting-forward.html"><span class="material-symbols-outlined">format_paint</span><div class="dropdowncc">Paint</div></a>
     <a href="https://chill-radio.totob12.repl.co/"><span class="material-symbols-outlined">radio</span><div class="dropdowncc">Radio</div></a>
-    <a href="https://totob12.github.io/things/games.html"><span class="material-symbols-outlined">sports_esports</span><div class="dropdowncc">Games</div></a>
-    <a href="https://totob12.github.io/things/sites.html"><span class="material-symbols-outlined">handyman</span><div class="dropdowncc">Random</div></a>
-    <a href="https://totob12.github.io/things/countdown.html"><span class="material-symbols-outlined">hourglass_empty</span><div class="dropdowncc">Countdown</div></a>
+    <a href="https://totob12.com/things/games.html"><span class="material-symbols-outlined">sports_esports</span><div class="dropdowncc">Games</div></a>
+    <a href="https://totob12.ocm/things/sites.html"><span class="material-symbols-outlined">handyman</span><div class="dropdowncc">Random</div></a>
+    <a href="https://totob12.com/things/countdown.html"><span class="material-symbols-outlined">hourglass_empty</span><div class="dropdowncc">Countdown</div></a>
 </section>
 </nav>
   
 <nav>
   <button id="side-btn" onclick="side(1)"/><span class="material-symbols-outlined">menu</span></button>
   <div class="nav-main-section">
-    <a class="home active" href="https://totob12.github.io/index.html"><span class="material-symbols-outlined">home</span></a>
+    <a class="home active" href="https://totob12.com"><span class="material-symbols-outlined">home</span></a>
     <a href="https://TotoB12-Chat.totob12.repl.co/"><span class="material-symbols-outlined">forum</span>Social</a>
-    <a href="https://totob12.github.io/things/inpainting-forward.html"><span class="material-symbols-outlined">format_paint</span>Paint</a>
-    <a href="https://totob12.github.io/things/radio.html"><span class="material-symbols-outlined">radio</span>Radio</a>
-    <a href="https://totob12.github.io/things/games.html"><span class="material-symbols-outlined">sports_esports</span>Games</a>
-    <a href="https://totob12.github.io/things/sites.html"><span class="material-symbols-outlined">handyman</span>Random</a>
-    <a href="https://totob12.github.io/things/countdown.html"><span class="material-symbols-outlined">hourglass_empty</span>Countdown</a>
+    <a href="https://totob12.com/things/inpainting-forward.html"><span class="material-symbols-outlined">format_paint</span>Paint</a>
+    <a href="https://totob12.com/things/radio.html"><span class="material-symbols-outlined">radio</span>Radio</a>
+    <a href="https://totob12.com/things/games.html"><span class="material-symbols-outlined">sports_esports</span>Games</a>
+    <a href="https://totob12.com/things/sites.html"><span class="material-symbols-outlined">handyman</span>Random</a>
+    <a href="https://totob12.com/things/countdown.html"><span class="material-symbols-outlined">hourglass_empty</span>Countdown</a>
   </div>
   <div class="nav-section ns3">
   <button id="setting-btn" onclick="setting(1)"/><span class="material-symbols-outlined">settings</span></button>
@@ -231,7 +231,7 @@ main.addEventListener("click", function(){
 <button id="setting-close" onclick="setting()"><span class="material-symbols-outlined">close</span></button>
   <section>
     <h1>Settings</h1>
-    <a href="https://totob12.github.io/things/feedback.html"><span class="material-symbols-outlined">alternate_email</span>Contact and help</a>
+    <a href="https://totob12.com/things/feedback.html"><span class="material-symbols-outlined">alternate_email</span>Contact and help</a>
     <div>
       <button id="dark" onclick="dark()"><span class="material-symbols-outlined">dark_mode</span></button>
       <button id="light" onclick="light()"><span class="material-symbols-outlined">light_mode</span></button>
